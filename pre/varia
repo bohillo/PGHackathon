@@ -1,0 +1,34 @@
+
+Kurs sparka:
+http://blog.brakmic.com/data-science-for-losers-part-5-spark-dataframes/
+
+Odpalanie pysparka w jupyterze
+PYSPARK_PYTHON=python2 PYSPARK_DRIVER_PYTHON=ipython PYSPARK_DRIVER_PYTHON_OPTS="notebook" pyspark
+
+
+Tworzenie tabeli w hive
+CREATE TABLE tabelka (id int, name string) [clustered into 32 buckets] ROW FORMAT DELIMITED FIELDS TERMINATED BY ' ';
+
+CREATE TABLE pg.StockPrices (Date DATE, Open FLOAT, High float, Low float, Volume float, AdjClose float)  ROW FORMAT DELIMITED FIELDS TERMINATED BY ',';
+
+create table pg.Tweets (
+TweetId int ,
+Date Date ,
+Location String ,
+Latitude Float ,
+Language String ,
+hashtags String ,
+text String ,
+HashedUsername String ,
+HashedUserScreenname String ,
+UserLanguage String ,
+UserLcatin String ,
+UserDescriptin String ,
+NumberFFllwers String ,
+NumberFRetweets String
+) ROW FORMAT DELIMITED FIELDS TERMINATED BY '|';
+
+
+Ladowanie danych do hive'a
+LOAD DATA LOCAL INPATH 'path' [OVERWRITE] INTO TABLE tabelka
+

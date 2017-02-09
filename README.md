@@ -1,2 +1,2 @@
 # PGHackathon
-Repository for PG Hackathon 2017
+Repo na hackathon PG 10-11.02.2017
